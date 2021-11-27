@@ -16,6 +16,11 @@ app.get("/test1", (req, res) => {
   res.render("test1");
 })
 
+app.get("/test2", (req, res) => {
+  res.render("test2");
+  console.log("aws is working like butter but heroku is better");
+})
+
 const server = app.listen(process.env.PORT || 5000 );
 const portNumber = server.address().port;
 console.log(`я хочу пойти домой: ${portNumber}`);
